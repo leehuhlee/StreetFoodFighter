@@ -7,14 +7,47 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Song+Myung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
     <div class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
-        <h1><a href="/">백종원의 스트리트 푸드파이터</a></h1>
+        <div class="page-header-img">
+            <a href="/"><img src="{% static 'images/title.png' %}" alt="백종원의 스트리트 푸드파이터" style="margin-left:-10px;"></a>
+            <div class="menu" style="overflow:scroll; overflow-x:hidden; height:300px">
+                <a href=#none onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none'; class="main">
+                    <h2>시즌1</h2>
+                </a><div class="sub" style='display:block'>
+                    <ul>
+                        <li><a href="/"> <h3>중국 청두</h3></a></li>
+                        <li><a href="/"> <h3>중국 홍콩</h3></a></li>
+                        <li><a href="/"> <h3>태국 방콕</h3></a></li>
+                        <li><a href="/"> <h3>일본 도쿄</h3></a></li>
+                        <li><a href="/"> <h3>미국 하와이</h3></a></li>
+                        <li><a href="/"> <h3>태국 지방요리</h3></a></li>
+                        <li><a href="/"> <h3>일본 후쿠오카</h3></a></li>
+                        <li><a href="/"> <h3>중국 하얼빈</h3></a></li>
+                    </ul>
+                </div>
+                <a href=#none onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none'; class="main">
+                <h2>시즌2</h2>
+                </a><div class="sub" style='display:block'>
+                    <ul>
+                        <li><a href="/"> <h3>터키 이스탄불</h3></a></li>
+                        <li><a href="/"> <h3>베트남 하노이</h3></a></li>
+                        <li><a href="/"> <h3>미국 뉴욕</h3></a></li>
+                        <li><a href="/"> <h3>중국 시안</h3></a></li>
+                        <li><a href="/"> <h3>멕시코 멕시코시티</h3></a></li>
+                        <li><a href="/"> <h3>대만 타이베이</h3></a></li>
+                        <li><a href="/"> <h3>이탈리아 시칠리아</h3></a></li>
+                        <li><a href="/"> <h3>중국 우한</h3></a></li>
+                        <li><a href="/"> <h3>말레이시아 페낭</h3></a></li>
+                        <li><a href="/"> <h3>중국 연변</h3></a></li>
+                    </ul>
+                </div>
+            </div>
+            <img src="{% static 'images/teacher.png' %}" alt="백종원의 스트리트 푸드파이터" style="margin: 0px 15px; position:fixed; left:0px; bottom:0px; width:430px;">
+        </div>
     </div>
     <div class="content container">
         <div class="row">
@@ -22,8 +55,10 @@
             {% block content %}
             {% endblock %}
             </div>
+
         </div>
+        <p>made by Han</p>
     </div>
-    <p>made by Han</p>
 </body>
+
 </html>
