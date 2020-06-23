@@ -27,6 +27,13 @@ a, a:hover, a:focus {
     float:left;
 }
 
+.menu{
+    overflow:scroll;
+    overflow-x:hidden;
+    height:50%;
+    z-index:5;
+}
+
 .menu .main h2, .menu .sub h3{
     color : #ffffff;
     font-family: 'Do Hyeon', sans-serif;
