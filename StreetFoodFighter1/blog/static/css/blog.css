@@ -30,7 +30,7 @@ a, a:hover, a:focus {
 .menu{
     overflow:scroll;
     overflow-x:hidden;
-    height:10%;
+    height:500px;
     z-index:5;
 }
 
